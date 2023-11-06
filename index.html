@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Body Kare</title>
+</head>
+<body>
+    <h1>Body Kare</h1>
+    <p>See console...</p>
+    <script>
+        // function addPricesInCart() { // no parameter specified, using arguments object
+        //     let totalPrice = 0;
+        //     for (let i = 0; i < arguments.length; i++) { // loop through all prices passed as arguments
+        //         totalPrice += arguments[i]; // add each price to totalPrice
+        //     }
+        //     console.log(`Total items: ${arguments.length}; Total price: $${totalPrice}`);
+        // }
+
+        // addPricesInCart(4.49, 5.99, 2.99); // prints "Total items: 3; Total price: $13.47"
+        // addPricesInCart(2.23, 1.99, 14.24, 3.45); // prints "Total items: 4; Total price: $21.91"
+        // addPricesInCart(3.67); // prints "Total items: 1; Total price: $3.67"
+
+        function addPricesInCart(...prices) { // uses rest parameter instead
+            let totalPrice = 0;
+            for (let i = 0; i < prices.length; i++) { // loop through all prices passed as arguments
+                totalPrice += prices[i]; // add prices to totalPrice
+            }
+            console.log(`Total items: ${prices.length}; Total price: $${totalPrice}`);
+        }
+
+        addPricesInCart(4.49, 5.99, 2.99); // prints "Total items: 3; Total price: $13.47"
+    </script>
+</body>
+</html>
