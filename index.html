@@ -30,6 +30,14 @@
         }
 
         addPricesInCart(4.49, 5.99, 2.99); // prints "Total items: 3; Total price: $13.47"
+
+        // Working with default arguments
+        function addProduct(name, price = 0, quantity = 0) { // setting default values
+            let productObject = {name: name, price: price, itemsInStock: quantity} // create return object
+            return productObject;
+        }
+
+        console.log(addProduct('Shampoo', 4.99)); // prints {name: "shampoo", price: 4.99, itemsInStock: 0}
     </script>
 </body>
 </html>
